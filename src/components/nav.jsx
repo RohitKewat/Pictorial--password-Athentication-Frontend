@@ -7,7 +7,7 @@ const Nav=()=>{
     return(
 <div>
         <header>
-          <h1>Pictorial Password Athentication</h1>
+          <h1>Pictorial Password Authentication</h1>
         </header>
         <nav>
           <ul>
