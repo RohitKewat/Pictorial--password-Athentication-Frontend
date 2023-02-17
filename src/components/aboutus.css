@@ -1,0 +1,84 @@
+/* service section */
+.mainheading{
+    font-size: 2.5rem;
+    color: #9d4052;
+    line-height: 2;
+    /* text-align: center; */
+}
+.container3{
+    width: 70%;
+    margin: auto;
+}
+.container3 h2, .container3 p{
+    text-align: left;
+    padding: 10px 0px;
+    margin: 0;
+    width: 100%;
+}
+.project1, .project2{
+    width: 15%;
+    float: left;
+    margin-right: 40px;
+}
+
+.service2{
+    margin-top: 70px;
+}
+/* Social Icons */
+.social-menu ul{
+   
+    display: flex;
+  padding-left: 200px !important;
+}
+
+.social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+    font-size: 20px;
+    line-height: 50px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #0077b5;
+}
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #000;
+}
+#userbox{
+    height: 300px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+}

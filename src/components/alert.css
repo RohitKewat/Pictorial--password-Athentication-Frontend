@@ -1,0 +1,10 @@
+.alert{
+    padding: 10px 20px !important;
+    text-transform: capitalize;
+}
+.alert .btn{
+    padding: 10px !important;
+  display: block;
+  width: 10% !important;
+  margin-top: -5px;
+}
