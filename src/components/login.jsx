@@ -16,7 +16,11 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!email || !imageIds ){
 
+      setmessage("Please Enter the Email or Password")
+      return
+    }
     let password = imageIds.join(",");
 
     const formdata = new FormData();

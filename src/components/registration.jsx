@@ -17,6 +17,17 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!email || !imageIds ){
+
+      setmessage("Please Enter the Email or Password")
+      return
+    }
+    if(!user){
+      setmessage("Please Enter your Name")
+
+      return
+    }
+
 
     let password = imageIds.join(",");
 
