@@ -10,34 +10,48 @@ function Register() {
   const [pass, setpass] = useState();
   const [imageIds, setImageIds] = useState([]);
 
+
   const [message, setmessage] = useState();
   const handleImageClick = (imageId) => {
     setImageIds([...imageIds, imageId]);
   };
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
-    if(!email || !imageIds ){
 
-      setmessage("Please Enter the Email or Password")
+   
+
+    if(!email ){
+
+      setmessage("Please Enter the Email")
+      setemail("");
+      seteuser("");
+      setImageIds([]);
       return
     }
-    if(!user){
+    else if(!user){
       setmessage("Please Enter your Name")
-
+      setemail("");
+      seteuser("");
+      setImageIds([]);
       return
     }
-
+    // console.log("log 30",imageIds)
+    
+    else if(imageIds.length==0){
+      
+      setmessage("Please Enter the  Password")
+      setemail("");
+      seteuser("");
+      setImageIds([]);
+      return
+    }
+    
 
     let password = imageIds.join(",");
 
-    const formdata = new FormData();
-    formdata.append("name", user);
-    formdata.append("email", email);
-    formdata.append("password", password);
-    console.log(user);
-    console.log(email);
-    console.log(password);
+
 
     // fetch('https://pitorial-authentication.onrender.com/createuser', {
 
@@ -69,7 +83,6 @@ function Register() {
         return response.json();
       })
       .then((data) => {
-        console.log("line 61", data);
         if (data.status === "failed") {
           setmessage("User is already Registered");
         } else if (data.status === "succefully created") {
@@ -82,13 +95,15 @@ function Register() {
         console.error("There was a problem with the fetch operation:", error);
         setmessage(error.message);
       });
-
+     
     //----------------------------------------------------------------
-
+  
     setemail("");
     seteuser("");
-    setImageIds("");
+    setImageIds([]);
   };
+
+ 
   return (
     <div className="container-fluid px-0">
       <Nav />

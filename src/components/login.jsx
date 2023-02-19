@@ -2,6 +2,7 @@ import Nav from "./nav";
 import SignupSection from "./SignupSection";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./alert.css";
 const Login = () => {
   const navigate = useNavigate();
@@ -9,24 +10,35 @@ const Login = () => {
   const [pass, setpass] = useState();
   const [imageIds, setImageIds] = useState([]);
 
-  const [message, setmessage] = useState();
+  const [message, setmessage] = useState(null);
   const handleImageClick = (imageId) => {
     setImageIds([...imageIds, imageId]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!email || !imageIds ){
 
-      setmessage("Please Enter the Email or Password")
+   
+    if(!email ){
+
+      setmessage("Please Enter the Email ")
+      setemail("");
+      setImageIds([]);
       return
     }
-    let password = imageIds.join(",");
 
-    const formdata = new FormData();
+    if(imageIds.length==0){
 
-    formdata.append("email", email);
-    formdata.append("password", password);
+      setmessage("Please Enter the  Password")
+      setemail("");
+
+      return
+    }
+  
+
+
+    let password = imageIds?.join(",");
+
 
     // fetch('https://pitorial-authentication.onrender.com/createuser', {
 
@@ -70,7 +82,7 @@ const Login = () => {
     //----------------------------------------------------------------
 
     setemail("");
-    setImageIds("");
+    setImageIds([]);
   };
 
   return (

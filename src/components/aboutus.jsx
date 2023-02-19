@@ -87,7 +87,7 @@ const Aboutus=()=>{
           <h1 className="mainheading">About The Project Mentor</h1>
           <div className="service1">
             <img src="images/anveshsir.png" alt="" className="project2" />
-            <h2 className="subheading">Anvesh Singh</h2>
+            <h2 className="subheading">Dr. Anvesh Singh</h2>
             <p className="description">
               Assistant Professor at Bansal Institute of Science & Technology
               Bhopal.
